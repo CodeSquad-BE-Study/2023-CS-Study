@@ -11,36 +11,37 @@ TIME-WAIT 상태는 4 way handshake의 일부로 TCP 연결 종료 과정에서 
 
 # 4 way handshake
 
-4 way handshake는 다음 4 단계를 거쳐 진행됩니다.
-![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/847fd377-aad0-44f3-b009-7cbafc6a0643)
+4 way handshake는 다음 4 단계를 거쳐 진행됩니다.  
+
+<img src="https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/847fd377-aad0-44f3-b009-7cbafc6a0643" width="300" height="300">
 
 
 ### 1 단계
 
 클라리언트가 연결을 종료하기 위해 **FIN** 을 전송한다.
 
-![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/74409d00-18b4-4470-b598-92565df6cfb3)
+<img src="https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/74409d00-18b4-4470-b598-92565df6cfb3" width="300" height="300">
 
 
 ### 2 단계
 
 서버는 클라이언트의 **FIN** 요청을 받고, 확인메시지인 **ACK**를 전송한다.
 
-![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/6d6043f2-3cef-4373-96ca-a7b8cbb7acc7)
+<img src="https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/6d6043f2-3cef-4373-96ca-a7b8cbb7acc7" width="300" height="300">
 
 
 ### 3 단계
 
 서버가 연결을 종료할 준비가 되면, 클라이언트에게 **FIN** 요청을 전송한다.
 
-![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/c3393afe-0217-4343-abbe-0907083f6e5e)
+<img src="https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/c3393afe-0217-4343-abbe-0907083f6e5e" width="300" height="300">
 
 
 ### 4 단계
 
 클라이언트는 연결 종료 준비가 되었다는 ACK 메시지를 전송합니다.
 
-![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/9526444b-d9ad-48ad-91a0-203fe7aaf59c)
+<img src="https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/9526444b-d9ad-48ad-91a0-203fe7aaf59c" width="300" height="300">
 
 
 **이 때 클라이언트의 상태는 TIME-WAIT** 가 됩니다.
@@ -57,7 +58,7 @@ TIME-WAIT 상태는 4 way handshake의 일부로 TCP 연결 종료 과정에서 
 
 첫 번째 상황을 가정해보겠습니다.
 
-![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/6555d870-5eed-4250-bfde-6952c0e0340d)
+<img src="https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/6555d870-5eed-4250-bfde-6952c0e0340d" width="300" height="300">
 
 
 이렇게 서버가 FIN 요청을 보낸 후 클라이언트가 ACK 응답을 보냈는데, 중간에 패킷이 유실된다면 어떻게 될까요?
@@ -66,7 +67,7 @@ TIME-WAIT 상태는 4 way handshake의 일부로 TCP 연결 종료 과정에서 
 
 두 번째 상황입니다.
 
-![image](https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/529e7c16-6c3f-4a8c-929a-4be613016fb8)
+<img src="https://github.com/CodeSquad-BE-Study/2023-CS-Study/assets/115435784/529e7c16-6c3f-4a8c-929a-4be613016fb8" width="300" height="300">
 
 
 클라이언트가 마지막 요청을 보낸 후, FIN 요청을 주고받게 되는데, 마지막 요청이 시간이 오래 걸려서 CLOSE 된 후 ACK가 도착한다면 어떻게 될까요?
